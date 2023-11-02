@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overnight Estimator</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+
+  <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <a href="rentACar.html">Rent a Car</a>
+        <a href="activities.html">Activities</a>
+</div>
+
+    <div>
+
+        <div class="row">
+            <div class="column" style="background-color: #F0F4FF;">
+              <h2>Enter Details of Your Future Stay</h2>
+              <p>Enter your name: <input type="text">
+                <br> <br>
+                Enter your Email: <input type="text"> 
+                <br> <br>
+                Check In Date: <input type="date">
+                <br> <br>
+                Number of nights you will be staying: <input id="nights" type="number">
+                <br> <br>
+                Room Type: <select name="rooms" id="roomType">
+                    <option value="queen">Queen (inc roll away)</option>
+                    <option value="king">King</option>
+                    <option value="suite">2-bedroom suite</option>
+                  </select>
+                <br> <br>
+                Number of Adults: <input type="number">
+                <br> <br>
+                Number of Children: <input type="number">
+                <br> <br>
+                Discounts: 
+                Senior: <input id="seniorDiscount" value="AAA" type="radio" name="discountType">
+                Military: <input id="militaryDiscount" value="Military" type="radio" name="discountType">
+                <br> <br>
+                <input id="submit" type="submit">
+                <br>
+            </p>
+            </div>
+            <div class="column" style="background-color:#D4E0FF;">
+              <h2>Your Estimated Cost</h2>
+              <p>
+                Original Room Cost: <input id="originalCost" type="number" readonly>
+                <br> <br>
+                Discount: <input id="discountPercent" type="number" readonly>
+                <br> <br>
+                Discounted Room Cost: <input id="discountedCost" type="number" readonly>
+                <br> <br>
+                Tax: <input id="tax" type="number" readonly>
+                <br> <br>
+                Total: <input id="total" type="number" readonly>
+              <br>
+            </p>
+            </div>
+          </div>
+
+    </div>
+
+<style>
+    .column {
+  float: left;
+  width: 50%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+
+
+    <script src="../scripts/costEstimator.js"></script>
+</body>
+</html>
